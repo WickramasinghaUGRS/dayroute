@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayyRoute - Journey Through Nature, Culture & Heritage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Hero Section -->
+    <header class="hero-section">
+    <!-- Image Slider Backgrounds -->
+    <div class="hero-slider">
+        <img src="images/heroimage1.png" class="slide active" alt="Hero 1">
+        <img src="images/heroimage2.png" class="slide" alt="Hero 2">
+        <img src="images/heroimage3.png" class="slide" alt="Hero 3">
+    </div>
+
+    <!-- Overlay  -->
+    <div class="hero-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="DayyRoute Logo">
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="nature.php">NATURE</a></li>
+                <li><a href="religious.php">RELIGIOUS</a></li>
+                <li><a href="cultural.php">CULTURAL</a></li>
+                <li><a href="map.html">MAP</a></li>
+            </ul>
+            <div class="login-btn-container">
+                <a href="login.php" class="login-btn">LOGIN</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+        <h1>DAY ROUTE</h1>
+        <p>Journey Through Nature, Culture & Heritage</p>
+    </div>
+    
+    <div></div> <!-- for Flex space alignment  -->
+</header>
+
+    <!-- Explore Section -->
+    <section class="explore-section">
+        <div class="explore-title">
+            <h2>EXPLORE</h2>
+            <p>Popular Destinations</p>
+        </div>
+
+        <div class="cards-container">
+            <!-- Card 1 -->
+            <div class="card">
+              <a href="cultural.php">  <img src="images/ambuluwawa.jpg" alt="Ambuluwawa"> </a>
+                <h3>Ambuluwawa</h3>
+                <p>Biodiversity complex</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+               <a href="nature.php"> <img src="images/peradeniya.jpg" alt="Peradeniya"> </a>
+                <h3>Peradeniya</h3>
+                <p>Botanical Garden</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <a href="religious.php"><img src="images/Mahaweli maha seya1.jfif" alt="Mahaweli MAha Seya"> </a>
+                <h3>Mahaweli Maha Seya</h3>
+                <p>Kothmale</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <ul class="footer-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="nature.php">NATURE</a></li>
+                    <li><a href="religious.php">RELIGIOUS</a></li>
+                    <li><a href="cultural.php">CULTURAL</a></li>
+                    <li><a href="map.html">MAP</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <p><strong>CONTACT US</strong></p>
+                <p>EMAIL</p>
+                <p>PHONE &nbsp;&nbsp;&nbsp;&nbsp; 081 1234569</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DayRoute. All rights reserved.</p>
+        </div>
+    </footer>
+<script>
+    const slides = document.querySelectorAll('.hero-slider img');
+    let currentIndex = 0;
+
+    function nextSlide() {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add('active');
+    }
+
+    // change image per every 3 secs//
+    setInterval(nextSlide, 3000);
+</script>
+</body>
+</html>

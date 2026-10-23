@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayyRoute - Route Map</title>
+    <!-- CSS file connection -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .map-section {
+            padding: 40px 60px;
+            text-align: center;
+        }
+        .map-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 20px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .places-list-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+        .category-box {
+            background-color: #150533;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 280px;
+            text-align: left;
+        }
+        .category-box h3 {
+            color: #00bcd4;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #00bcd4;
+            padding-bottom: 5px;
+        }
+        .category-box ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        .category-box li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar  -->
+    <header style="background-color: #150533; padding: 20px 60px;">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="DayyRoute Logo"></a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="nature.php">NATURE</a></li>
+                    <li><a href="religious.php">RELIGIOUS</a></li>
+                    <li><a href="cultural.php">CULTURAL</a></li>
+                    <li><a href="map.html" style="color: #00bcd4;">MAP</a></li>
+                </ul>
+                <a href="logout.php" class="login-btn">LOGOUT</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Map Section -->
+    <main class="map-section">
+        <div class="explore-title">
+            <h2>DayyRoute Interactive Map</h2>
+            <p>Explore the full travel route connecting Nature, Religious, and Cultural attractions.</p>
+        </div>
+
+        <!-- Embedded Google Map -->
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d126588.60155099342!2d80.51868356885374!3d7.149728345799988!2m3!1f0!1f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3ae3628461751efd%3A0xc6c7bc3827d0fb83!2sAmbuluwawa%20Tower%2C%20Gampola!3m2!1d7.1189914!2d80.5513904!4m5!1s0x3ae366266498acd3%3A0x411a3818a1e03c3b!2sRoyal%20Botanical%20Gardens%2C%20Peradeniya!3m2!1d7.2683107!2d80.5965471!5e0!3m2!1sen!2slk!4f13.1" 
+                width="100%" 
+                height="500" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <!-- Route Destinations Overview -->
+        <div class="places-list-container">
+            <!-- Nature -->
+            <div class="category-box">
+                <h3>Nature Places</h3>
+                <ul>
+                    <li>Kotmale Dam</li>
+                    <li>Kadiyanlena Ella Falls</li>
+                    <li>Galpoththa Ella Falls</li>
+                    <li>Peradeniya Botanical Garden</li>
+                </ul>
+            </div>
+
+            <!-- Religious -->
+            <div class="category-box">
+                <h3>Religious Places</h3>
+                <ul>
+                    <li>Mahaweli Maha Seya - Kotmale</li>
+                    <li>Niyangampaya Rajamaha Viharaya</li>
+                    <li>Gatabe Rajamaha Viharaya</li>
+                </ul>
+            </div>
+
+            <!-- Cultural -->
+            <div class="category-box">
+                <h3>Cultural Places</h3>
+                <ul>
+                    <li>Ambuluwawa Tower & Bio Diversity Complex</li>
+                    <li>Embekke Devalaya</li>
+                    <li>Gadaladeniya Viharaya</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section  -->
+    <footer class="footer">
+        <div class="footer-content">
+            <ul class="footer-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="nature.php">NATURE</a></li>
+                <li><a href="religious.php">RELIGIOUS</a></li>
+                <li><a href="cultural.php">CULTURAL</a></li>
+                <li><a href="map.html">MAP</a></li>
+            </ul>
+            <div class="contact-col">
+                <p><strong>CONTACT US</strong></p>
+                <p>EMAIL</p>
+                <p>PHONE &nbsp;&nbsp; 081 1234569</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DayRoute. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
